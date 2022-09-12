@@ -92,11 +92,11 @@ const config: HardhatUserConfig = {
   },
   dodoc: {
     runOnCompile: false,
-    include: ["Greeter"],
+    include: [""],
     outputDir: "docs",
   },
   packager: {
-    contracts: ["Greeter"],
+    contracts: [""],
     includeFactories: true,
   },
 };

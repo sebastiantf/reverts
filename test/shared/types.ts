@@ -3,7 +3,6 @@ import type { MockContract } from "ethereum-waffle";
 import type { Fixture } from "ethereum-waffle";
 
 import { ERC20Token } from "../../src/types/ERC20Token";
-import { Greeter } from "../../src/types/Greeter";
 
 declare module "mocha" {
   interface Context {
@@ -15,12 +14,10 @@ declare module "mocha" {
 }
 
 export interface Contracts {
-  greeter: Greeter;
   erc20Token: ERC20Token;
 }
 
 export interface Mocks {
-  greeter: MockContract;
   erc20Token: MockContract;
 }
 

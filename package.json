@@ -55,7 +55,8 @@
     "ts-generator": "^0.1.1",
     "ts-node": "^10.5.0",
     "typechain": "^7.0.0",
-    "typescript": "^4.5.5"
+    "typescript": "^4.5.5",
+    "xdeployer": "^1.1.20"
   },
   "files": [
     "/artifacts",

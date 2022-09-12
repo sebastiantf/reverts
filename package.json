@@ -1,11 +1,9 @@
 {
-  "name": "@coinvise/solidity-template",
-  "description": "Template for writing Solidity smart contracts",
+  "name": "reverts",
+  "description": "Smart contracts for testing Solidity reverts",
   "version": "1.0.0",
-  "author": {
-    "name": "Coinvise",
-    "url": "https://github.com/coinvise"
-  },
+  "author": "Sebastian T F <sebastian.tharakan97@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "@codechecks/client": "^0.1.12",
     "@commitlint/cli": "^16.2.1",

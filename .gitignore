@@ -27,7 +27,9 @@ yarn-error.log*
 # types
 src/types/*
 !src/types/common.ts
+!src/types/Reverts.ts
 
 # factories
 !src/types/factories
 src/types/factories/*
+!src/types/factories/Reverts__factory.ts

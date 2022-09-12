@@ -5,6 +5,7 @@ import "@primitivefi/hardhat-dodoc";
 import "hardhat-gas-reporter";
 import "solidity-coverage";
 import "hardhat-packager";
+import "xdeployer";
 
 import "./tasks/accounts";
 import "./tasks/deploy";
@@ -98,6 +99,13 @@ const config: HardhatUserConfig = {
   packager: {
     contracts: ["Reverts"],
     includeFactories: true,
+  },
+  xdeploy: {
+    contract: "Reverts",
+    salt: "Reverts",
+    signer: process.env.PRIVATE_KEY,
+    networks: ["rinkeby", "goerli", "mumbai"],
+    rpcUrls: [process.env.RINKEBY_URL, process.env.GOERLI_URL, process.env.MUMBAI_URL],
   },
 };
 

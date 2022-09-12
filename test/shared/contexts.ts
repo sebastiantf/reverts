@@ -4,14 +4,13 @@ import type { Wallet } from "@ethersproject/wallet";
 import type { SignerWithAddress } from "@nomiclabs/hardhat-ethers/dist/src/signer-with-address";
 import { ethers, waffle } from "hardhat";
 
-import type { Contracts, Mocks, Signers } from "./types";
+import type { Contracts, Signers } from "./types";
 
 /// This is run at the beginning of each suite of tests: 2e2, integration and unit.
 export function baseContext(description: string, hooks: () => void): void {
   describe(description, function () {
     before(async function () {
       this.contracts = {} as Contracts;
-      this.mocks = {} as Mocks;
       this.signers = {} as Signers;
 
       const signers: SignerWithAddress[] = await ethers.getSigners();

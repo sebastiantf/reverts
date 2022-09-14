@@ -1,5 +1,5 @@
 {
-  "name": "reverts",
+  "name": "@sebastiantf/reverts",
   "description": "Smart contracts for testing Solidity reverts",
   "version": "1.0.0",
   "author": "Sebastian T F <sebastian.tharakan97@gmail.com>",

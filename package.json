@@ -74,6 +74,10 @@
     "registry": "https://npm.pkg.github.com/",
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sebastiantf/reverts.git"
+  },
   "scripts": {
     "build:types": "yarn prepare:types && tsc --project ./tsconfig.prod.json && copyfiles --up 1 \"./src/**/*.d.ts\" ./dist",
     "clean": "shx rm -rf ./artifacts ./cache ./coverage ./src/types ./dist ./coverage.json",

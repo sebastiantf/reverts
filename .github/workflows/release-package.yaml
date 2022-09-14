@@ -30,7 +30,7 @@ jobs:
       - name: Test contracts
         run: yarn coverage
 
-  publish-gpr:
+  publish:
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -45,18 +45,28 @@ jobs:
         with:
           cache: yarn
           node-version: 16
-          registry-url: https://npm.pkg.github.com/
-          scope: "@sebastiantf"
 
       - name: Install dependencies
         run: yarn install --immutable
 
-      - name: Setup publishing
+      - name: Setup publishing to GitHub
         run: |
           yarn config set npmAuthToken $PUBLISH_GITHUB_TOKEN
           yarn config set npmAlwaysAuth true
+          yarn config set npmPublishRegistry "https://npm.pkg.github.com"
         env:
           PUBLISH_GITHUB_TOKEN: ${{ secrets.PUBLISH_GITHUB_TOKEN }}
 
-      - name: Publish package
+      - name: Publish package to GitHub
+        run: yarn npm publish
+
+      - name: Setup publishing to NPM
+        run: |
+          yarn config set npmAuthToken $PUBLISH_NPM_TOKEN
+          yarn config set npmAlwaysAuth true
+          yarn config set npmPublishRegistry "https://registry.npmjs.org/"
+        env:
+          PUBLISH_NPM_TOKEN: ${{ secrets.PUBLISH_NPM_TOKEN }}
+
+      - name: Publish package to NPM
         run: yarn npm publish

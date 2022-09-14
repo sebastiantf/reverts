@@ -53,10 +53,10 @@ jobs:
 
       - name: Setup publishing
         run: |
-          yarn config set npmAuthToken $PUBLISH_TOKEN
+          yarn config set npmAuthToken $PUBLISH_GITHUB_TOKEN
           yarn config set npmAlwaysAuth true
         env:
-          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+          PUBLISH_GITHUB_TOKEN: ${{ secrets.PUBLISH_GITHUB_TOKEN }}
 
       - name: Publish package
         run: yarn npm publish

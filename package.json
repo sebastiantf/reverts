@@ -1,7 +1,7 @@
 {
   "name": "@sebastiantf/reverts",
   "description": "Smart contracts for testing Solidity reverts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Sebastian T F <sebastian.tharakan97@gmail.com>",
   "license": "MIT",
   "devDependencies": {

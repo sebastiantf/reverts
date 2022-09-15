@@ -5,29 +5,29 @@ contract Reverts {
     error CustomError();
     error CustomErrorWithArgs(address addressArg, uint256 uintArg);
 
-    function requireWithoutMessage() public pure {
+    function requireWithoutMessage() external pure {
         // solhint-disable-next-line reason-string
         require(false);
     }
 
-    function requireWithMessage() public pure {
+    function requireWithMessage() external pure {
         require(false, "Reverts: requireWithMessage");
     }
 
-    function revertWithoutMessage() public pure {
+    function revertWithoutMessage() external pure {
         // solhint-disable-next-line reason-string
         revert();
     }
 
-    function revertWithMessage() public pure {
+    function revertWithMessage() external pure {
         revert("Reverts: revertWithMessage");
     }
 
-    function revertWithCustomError() public pure {
+    function revertWithCustomError() external pure {
         revert CustomError();
     }
 
-    function revertWithCustomErrorWithArgs() public view {
+    function revertWithCustomErrorWithArgs() external view {
         revert CustomErrorWithArgs(address(msg.sender), msg.sender.balance);
     }
 }

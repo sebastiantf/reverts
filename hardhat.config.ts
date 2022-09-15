@@ -102,7 +102,7 @@ const config: HardhatUserConfig = {
   },
   xdeploy: {
     contract: "Reverts",
-    salt: "Reverts",
+    salt: "v1.0.1",
     signer: process.env.PRIVATE_KEY,
     networks: ["rinkeby", "goerli", "mumbai"],
     rpcUrls: [process.env.RINKEBY_URL, process.env.GOERLI_URL, process.env.MUMBAI_URL],
